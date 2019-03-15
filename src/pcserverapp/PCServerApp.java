@@ -12,6 +12,9 @@ package pcserverapp;
 import java.net.*;
 import java.io.*;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.SwingUtilities;
 //import java.util.Scanner;
  
 
@@ -24,7 +27,14 @@ public class PCServerApp {
             ServerSocket sSocket = new ServerSocket(6787);
             
             
-            System.out.println("Your IP address is: " + InetAddress.getLocalHost() + " please enter this address in your phone app ");
+            System.out.println("Your IP address is: " + checkIP() + " please enter this address in your phone app ");
+            SwingUtilities.invokeLater(new Runnable() {
+           @Override
+           public void run() {
+               new SwingFrame(checkIP().toString());
+           }
+       });
+            
             System.out.println("---------------------------------------------------------------------------");
             System.out.println("Press \n 1 for next slide \n 0 to mute sound \n 3 to play or pause music ");
             System.out.println("---------------------------------------------------------------------------");
@@ -87,6 +97,14 @@ public class PCServerApp {
     }
     public static void main(String[] args)  {
         //TODO code application logic here
+        
+       /*SwingUtilities.invokeLater(new Runnable() {
+           @Override
+           public void run() {
+               new SwingFrame();
+           }
+       });  */
+        
        CreateSocket();
             
     }
@@ -141,4 +159,13 @@ public class PCServerApp {
     
     }
     
+    public static InetAddress checkIP(){
+    InetAddress IP = null;
+        try {
+            IP = InetAddress.getLocalHost();
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(PCServerApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return IP;
+    }
 }
