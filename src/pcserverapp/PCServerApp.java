@@ -86,7 +86,7 @@ public class PCServerApp {
            
             //after send attempt update statusCode and check status
             checkConnection(statusCode);
-            System.out.println(checkConnection(statusCode));
+            System.out.println(checkConnection(statusCode)+"\n");
         }
         }
         
