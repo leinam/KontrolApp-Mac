@@ -19,15 +19,16 @@ import javax.swing.SwingUtilities;
  
 
 public class PCServerApp {
- 
+    
+    static int statusCode;
     static int vol;
     public static void CreateSocket(){
        //establish server socket
         try{
             ServerSocket sSocket = new ServerSocket(6787);
             
-            
             System.out.println("Your IP address is: " + checkIP() + " please enter this address in your phone app ");
+            
             SwingUtilities.invokeLater(new Runnable() {
            @Override
            public void run() {
@@ -63,8 +64,11 @@ public class PCServerApp {
             System.out.println(clientMessage);
             //System.out.println(vol);
             
+            //check if connection has been established with client
             if (vol==2){
                 System.out.println("Connection established with phone.");
+                statusCode=vol;
+                checkConnection(statusCode);
             }
             
             //determine appropriate response
@@ -79,7 +83,10 @@ public class PCServerApp {
             /*
             String testToClient = clientMessage.toUpperCase();
             dosToClient.writeBytes(testToClient);}*/
-                        
+           
+            //after send attempt update statusCode and check status
+            checkConnection(statusCode);
+            System.out.println(checkConnection(statusCode));
         }
         }
         
@@ -97,13 +104,6 @@ public class PCServerApp {
     }
     public static void main(String[] args)  {
         //TODO code application logic here
-        
-       /*SwingUtilities.invokeLater(new Runnable() {
-           @Override
-           public void run() {
-               new SwingFrame();
-           }
-       });  */
         
        CreateSocket();
             
@@ -168,4 +168,14 @@ public class PCServerApp {
         }
     return IP;
     }
+    
+    public static boolean checkConnection(int statusCode){
+        boolean status = false;
+        if (statusCode==2){
+        status=true;
+        }
+        return status;
+    }
+    
+   
 }

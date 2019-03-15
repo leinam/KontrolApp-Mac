@@ -17,10 +17,12 @@ public class SwingFrame extends JFrame{
     private JButton btnCheckStatus;
     private JLabel jlIpAddress;
     private JPanel jp;
+    private JLabel jlConnStatus;
+    private JLabel jlInstruction;
     
     public SwingFrame(String IP){
     super("KontrolApp Pairing");
-        setSize(300,300);
+        setSize(500,300);
         setResizable(true);  
         setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         setVisible(true);
@@ -34,14 +36,16 @@ public class SwingFrame extends JFrame{
         });*/
         
     
-        
+        jlInstruction = new JLabel("Please enter the IP address below into your mobile phone app: ");
         jlIpAddress = new JLabel(IP);
         btnCheckStatus = new JButton("Check PC pairing status");
+        jlConnStatus =new JLabel("Current connection status is: " );
         jp = new JPanel();
         
-        
+        jp.add(jlInstruction);
         jp.add(jlIpAddress);
         jp.add(btnCheckStatus);
+        jp.add(jlConnStatus);
         
         //add(ipAddress, BorderLayout.CENTER);
         //add(btnCheckStatus, BorderLayout.SOUTH);
