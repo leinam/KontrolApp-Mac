@@ -49,9 +49,10 @@ public class PCServerApp {
            
             //BufferedInputStream bis = new BufferedInputStream(is);
             BufferedReader br = new BufferedReader(isR);
-            
+          
             //receive message and display
             String clientMessage = br.readLine();
+            
             try{
             vol = Integer.parseInt(clientMessage);}
             
@@ -59,7 +60,8 @@ public class PCServerApp {
                 e.printStackTrace();
             }
             
-            // vol=br.read();
+           // vol=isR.read();
+           
             
             System.out.println(clientMessage);
             //System.out.println(vol);
@@ -67,8 +69,8 @@ public class PCServerApp {
             //check if connection has been established with client
             if (vol==2){
                 System.out.println("Connection established with phone.");
-                statusCode=vol;
-                checkConnection(statusCode);
+                //statusCode=vol;
+                //checkConnection(statusCode);
             }
             
             //determine appropriate response
@@ -85,8 +87,8 @@ public class PCServerApp {
             dosToClient.writeBytes(testToClient);}*/
            
             //after send attempt update statusCode and check status
-            checkConnection(statusCode);
-            System.out.println(checkConnection(statusCode)+"\n");
+            //checkConnection(statusCode);
+            //System.out.println(checkConnection(statusCode)+"\n");
         }
         }
         
