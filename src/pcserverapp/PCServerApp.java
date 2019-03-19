@@ -153,6 +153,23 @@ public class PCServerApp {
             ArrowKeys.Fullscreen();
         }break;
         
+        case 9:{
+            ArrowKeys.exitFull();
+        }break;
+        
+         case 10:{
+            ArrowKeys.arrowDown();
+        }break;
+         
+         case 11:{
+            ArrowKeys.arrowUp();
+        }break;
+         
+         case 12:{
+             ArrowKeys.select();
+         }break;
+        
+        
         default:{
             //System.out.println("Please try again");
         }
