@@ -2,6 +2,8 @@ package pcserverapp;
 
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -38,9 +40,22 @@ public class SwingFrame extends JFrame{
     
         jlInstruction = new JLabel("Please enter the IP address below into your mobile phone app: ");
         jlIpAddress = new JLabel(IP);
-        btnCheckStatus = new JButton("Check PC pairing status");
+        btnCheckStatus = new JButton("Refresh Connection");
         jlConnStatus =new JLabel("Current connection status is: " );
         jp = new JPanel();
+        
+        
+        btnCheckStatus.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+            //PCServerApp.CreateSocket();
+            
+           //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    });
+        
+        
         
         jp.add(jlInstruction);
         jp.add(jlIpAddress);

@@ -303,4 +303,194 @@ public class ArrowKeys {
             iE.printStackTrace();
         }
 }
+            
+            public static void nextSong(){
+        String command = "kd:cmd";
+        try{
+            ProcessBuilder pb = new ProcessBuilder("/usr/local/Cellar/cliclick/4.0.1/bin/cliclick",command);
+            //pb.directory(new File(""));
+            System.out.println(command);
+            
+            Process p = pb.start();
+            p.waitFor();
+            StringBuilder sb = new StringBuilder();
+            
+            BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+            
+            String line;
+            while ((line = reader.readLine())!= null)//output process to string bit by bit
+            {
+                sb.append(line + "\n");
+            }
+            System.out.println(sb);
+        }
+        
+    
+    catch(IOException ioE)
+        {
+        ioE.printStackTrace();
+        }
+        
+    catch(InterruptedException iE)
+        {
+            iE.printStackTrace();
+        }
+        
+        command = "kp:arrow-right";
+        try{
+            ProcessBuilder pb = new ProcessBuilder("/usr/local/Cellar/cliclick/4.0.1/bin/cliclick",command);
+            //pb.directory(new File(""));
+            System.out.println(command);
+            
+            Process p = pb.start();
+            p.waitFor();
+            StringBuilder sb = new StringBuilder();
+            
+            BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+            
+            String line;
+            while ((line = reader.readLine())!= null)//output process to string bit by bit
+            {
+                sb.append(line + "\n");
+            }
+            System.out.println(sb);
+        }
+    
+    catch(IOException ioE)
+        {
+        ioE.printStackTrace();
+        }
+        
+    catch(InterruptedException iE)
+        {
+            iE.printStackTrace();
+        }
+        
+         command = "ku:cmd";
+        try{
+            ProcessBuilder pb = new ProcessBuilder("/usr/local/Cellar/cliclick/4.0.1/bin/cliclick",command);
+            //pb.directory(new File(""));
+            System.out.println(command);
+            
+            Process p = pb.start();
+            p.waitFor();
+            StringBuilder sb = new StringBuilder();
+            
+            BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+            
+            String line;
+            while ((line = reader.readLine())!= null)//output process to string bit by bit
+            {
+                sb.append(line + "\n");
+            }
+            System.out.println(sb);
+        }
+        
+    
+    catch(IOException ioE)
+        {
+        ioE.printStackTrace();
+        }
+        
+    catch(InterruptedException iE)
+        {
+            iE.printStackTrace();
+        }
+        
+}
+            
+            public static void prevSong(){
+        String command = "kd:cmd";
+        try{
+            ProcessBuilder pb = new ProcessBuilder("/usr/local/Cellar/cliclick/4.0.1/bin/cliclick",command);
+            //pb.directory(new File(""));
+            System.out.println(command);
+            
+            Process p = pb.start();
+            p.waitFor();
+            StringBuilder sb = new StringBuilder();
+            
+            BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+            
+            String line;
+            while ((line = reader.readLine())!= null)//output process to string bit by bit
+            {
+                sb.append(line + "\n");
+            }
+            System.out.println(sb);
+        }
+        
+    
+    catch(IOException ioE)
+        {
+        ioE.printStackTrace();
+        }
+        
+    catch(InterruptedException iE)
+        {
+            iE.printStackTrace();
+        }
+        
+        command = "kp:arrow-left";
+        try{
+            ProcessBuilder pb = new ProcessBuilder("/usr/local/Cellar/cliclick/4.0.1/bin/cliclick",command);
+            //pb.directory(new File(""));
+            System.out.println(command);
+            
+            Process p = pb.start();
+            p.waitFor();
+            StringBuilder sb = new StringBuilder();
+            
+            BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+            
+            String line;
+            while ((line = reader.readLine())!= null)//output process to string bit by bit
+            {
+                sb.append(line + "\n");
+            }
+            System.out.println(sb);
+        }
+    
+    catch(IOException ioE)
+        {
+        ioE.printStackTrace();
+        }
+        
+    catch(InterruptedException iE)
+        {
+            iE.printStackTrace();
+        }
+        
+         command = "ku:cmd";
+        try{
+            ProcessBuilder pb = new ProcessBuilder("/usr/local/Cellar/cliclick/4.0.1/bin/cliclick",command);
+            //pb.directory(new File(""));
+            System.out.println(command);
+            
+            Process p = pb.start();
+            p.waitFor();
+            StringBuilder sb = new StringBuilder();
+            
+            BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+            
+            String line;
+            while ((line = reader.readLine())!= null)//output process to string bit by bit
+            {
+                sb.append(line + "\n");
+            }
+            System.out.println(sb);
+        }
+        
+    
+    catch(IOException ioE)
+        {
+        ioE.printStackTrace();
+        }
+        
+    catch(InterruptedException iE)
+        {
+            iE.printStackTrace();
+        }
+        
+}
 }
