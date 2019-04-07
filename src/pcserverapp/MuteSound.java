@@ -39,5 +39,14 @@ public class MuteSound {
             System.out.println(e);
         }
     }
+    
+    public static void muteSound(){
+        setMasterVolume(0);
+    }
+    
+    public static void unmuteSound(){
+        setMasterVolume((float) 4.5);
+    }
+    
 
 }

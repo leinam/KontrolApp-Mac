@@ -30,12 +30,7 @@ public class SwingFrame extends JFrame{
         setVisible(true);
         
         
-        /*addWindowListener(new WindowAdapter() {
-            @Override
-        public void windowClosing(WindowEvent evt) {
-        setVisible(false);
-     }
-        });*/
+      
         
     
         jlInstruction = new JLabel("Please enter the IP address below into your mobile phone app: ");
@@ -49,7 +44,7 @@ public class SwingFrame extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             
-            //PCServerApp.CreateSocket();
+            
             
            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
@@ -62,8 +57,6 @@ public class SwingFrame extends JFrame{
         jp.add(btnCheckStatus);
         jp.add(jlConnStatus);
         
-        //add(ipAddress, BorderLayout.CENTER);
-        //add(btnCheckStatus, BorderLayout.SOUTH);
         
         add(jp,BorderLayout.CENTER);
         

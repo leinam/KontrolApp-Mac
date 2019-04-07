@@ -201,6 +201,10 @@ public class PCServerApp {
              MediaControl.launchpad();
          }break;
          
+         case 17:{
+             MuteSound.unmuteSound();
+         }break;
+         
         default:{
             //System.out.println("Please try again");
         }
